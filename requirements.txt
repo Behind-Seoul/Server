@@ -1,0 +1,6 @@
+django
+djangorestframeowrk
+djangorestframeowrk-simplejwt
+dj-rest-auth
+django-allauth
+mysqlclient

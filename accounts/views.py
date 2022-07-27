@@ -20,7 +20,6 @@ KAKAO_CALLBACK_URI = BASE_URL + 'accounts/kakao/callback/'
 state = getattr(settings, 'STATE')
 
 
-
 def kakao_login(request):
     rest_api_key = getattr(settings, 'KAKAO_REST_API_KEY')
     print(rest_api_key)

@@ -15,7 +15,7 @@ from rest_framework.response import Response
 
 from .models import User
 
-BASE_URL = "http://localhost:8000/"
+BASE_URL = "http://34.64.220.170:8000/"
 KAKAO_CALLBACK_URI = BASE_URL + "accounts/kakao/callback/"
 
 state = getattr(settings, "STATE")

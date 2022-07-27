@@ -19,8 +19,6 @@ for key, value in secrets.items():
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -111,9 +109,13 @@ WSGI_APPLICATION = "config.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
+        "ENGINE": DATABASE["ENGINE"],
+        "NAME": DATABASE["NAME"],
+        "USER": DATABASE["USER"],
+        "PASSWORD": DATABASE["PASSWORD"],
+        "HOST": DATABASE["HOST"],
+        "PORT": DATABASE["PORT"],
+    },
 }
 
 

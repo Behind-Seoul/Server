@@ -24,34 +24,35 @@ ALLOWED_HOSTS = ["*"]
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
-    "django.contrib.sites",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    # oauth login app
-    "accounts",
-    # django-rest-framework
-    "rest_framework",
-    "rest_framework_simplejwt.token_blacklist",
+
+    # my app
+    'accounts',
+    # django rest framework
+    'rest_framework',
+    'rest_framework_simplejwt.token_blacklist',
     # dj-rest-auth
-    "dj_rest_auth",
-    "rest_framework.authtoken",
-    "dj_rest_auth.registration",
+    'dj_rest_auth',
+    'dj_rest_auth.registration',
+    'rest_framework.authtoken',
     # django-allauth
-    "allauth",
-    "allauth.account",
-    "allauth.socialaccount",
-    "allauth.socialaccount.providers.kakao",
-    # CORS
-    "corsheaders",
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.kakao',
 ]
 
 REST_FRAMEWORK = {
-    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
-    "DEFAULT_AUTHENTICATION_CLASSES": (
-        "rest_framework.authentication.SessionAuthentication",
-        "dj_rest_auth.jwt_auth.JWTCookieAuthentication",
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+        'dj_rest_auth.jwt_auth.JWTCookieAuthentication',
     ),
 }
 

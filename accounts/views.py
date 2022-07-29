@@ -32,7 +32,7 @@ def kakao_login(request):
     )
 
 
-@api_view(['GET'])
+@api_view(['GET', 'POST'])
 def kakao_callback(request):
     CODE = request.GET['code']
     url = "https://kauth.kakao.com/oauth/token"
